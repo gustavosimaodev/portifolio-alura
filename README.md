@@ -1,2 +1,2 @@
-# portifolio-alura
-Portifólio desenvolvido durante a formação front-end
+# Portifolio
+ Portifolio Pessoal

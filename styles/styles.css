@@ -1,0 +1,145 @@
+/* Importation of fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap'); /* Imports the Krona One font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /* Imports the Montserrat font with various weights and styles from Google Fonts */
+
+:root {  /* Defines custom CSS properties (variables) */
+  --main-bg-color: #000000;  /* Sets the main background color to black */
+  --main-hl-color: #22D4FD;  /* Sets the main highlight color to a blueish teal */
+  --main-tx-color: #F6F6F6;  /* Sets the main text color to white */
+  --hover-color: #272727;   /* Sets the hover color for buttons to a dark gray */
+
+  --main-font: 'Krona One', sans-serif; /* Sets the main font to Krona One, with sans-serif as fallback */
+  --secondary-font: 'Montserrat', sans-serif; /* Sets the secondary font to Montserrat, with sans-serif as fallback */
+}
+
+* {  /* Applies styles to all elements */
+  margin: 0;
+  padding: 0;
+}
+
+body {  /* Styles for the body element */
+  box-sizing: border-box;  /* Ensures padding and border do not add to width/height */
+  background: var(--main-bg-color); /* Sets the background color to the main background color variable */
+  color: var(--main-tx-color);  /* Sets the text color to the main text color variable */
+}
+
+.header {  /* Styles for the header section */
+  padding: 2% 0 0 15%; /* Sets padding for the header */
+}
+
+.header__menu {  /* Styles for the menu within the header */
+  display: flex;  /* Arranges menu items in a row */
+  gap: 80px;  /* Adds space (gap) between menu items */
+}
+
+.header__menu__link {  /* Styles for individual menu links */
+  font-family: var(--secondary-font);  /* Sets font to the secondary font */
+  font-size: 1.5rem; /* Sets font size to 1.5rem */
+  font-weight: 600;  /* Sets font weight to bold */
+  text-decoration: none;  /* Removes underlines from links */
+  color: var(--main-hl-color); /* Sets link color to the main highlight color */
+}
+
+.showing {  /* Styles for the "showing" section */
+  padding: 5% 15%;  /* Sets padding for the showing section */
+  display: flex;  /* Arranges content in a row */
+  align-items: center;  /* Aligns content vertically in the center */
+  justify-content: space-between; /* Distributes content horizontally with space between */
+  gap: 56px;  /* Adds space (gap) between content elements */
+}
+
+.showing__content {  /* Styles for the content section within "showing" */
+  width: 50%;  /* Sets the width of the content section to 50% */
+  display: flex;  /* Arranges content within the section in a column */
+  flex-direction: column;  /* Stacks content on top of each other */
+  gap: 40px;  /* Adds space (gap) between content elements within */
+}
+
+.showing__content__title {  /* Styles for the title within the content section */
+  font-size: 2.25rem; /* Sets font size to 2.25rem */
+  font-family: var(--main-font);  /* Sets font to the main font */
+}
+
+.showing__content__title_title-highlight { /* Styles for the highlighted part of the title */
+  color: var(--main-hl-color); /* Sets color to the main highlight color */
+}
+
+.showing__p {  /* Styles for paragraphs within the content section */
+  font-size: 1.5rem; /* Sets font size to 1.5rem */
+  font-family: var(--secondary-font);  /* Sets font to the secondary font */
+}
+
+.showing__buttons {  /* Styles for the buttons section within "showing" */
+    display: flex;  /* Arranges buttons in a row */
+    flex-direction: column;  /* Stacks buttons vertically */
+    align-items: center;  /* Aligns buttons vertically in the center */
+    justify-content: space-between; /* Distributes buttons horizontally with space between */
+    gap: 32px;  /* Adds space (gap) between buttons */
+  }
+  
+  .showing__buttons__title {  /* Styles for the title within the buttons section */
+    font-family: var(--main-font);  /* Sets font to the main font */
+    font-weight: 400; /* Sets font weight to normal */
+    font-size: 1.5rem; /* Sets font size to 1.5rem */
+  }
+  
+  .showing__buttons__nav {  /* Styles for the navigation button within the buttons section */
+    text-decoration: none;  /* Removes underlines from the button */
+    color: var(--main-tx-color);  /* Sets button text color to the main text color */
+    display: flex;  /* Arranges content within the button in a row */
+    align-items: center;  /* Aligns content vertically in the center */
+    justify-content: center;  /* Centers content horizontally */
+    gap: 16px;  /* Adds space (gap) between content within the button */
+    padding: 21.5px 0;  /* Sets padding for the button */
+    width: 75%; /* Sets the width of the button to 75% */
+    text-align: center;  /* Centers text within the button */
+    font-size: 1.5rem;  /* Sets font size to 1.5rem */
+    border: 2px solid var(--main-hl-color);  /* Adds a 2px solid border with the main highlight color */
+    border-radius: 8px;  /* Rounds the corners of the button */
+    font-family: var(--secondary-font);  /* Sets font to the secondary font */
+    font-weight: 600;  /* Sets font weight to bold */
+  }
+  
+  .showing__buttons__link:hover {  /* Styles for the button when hovered */
+    background-color: var(--hover-color);  /* Sets background color to the hover color */
+  }
+  
+  .showing__img {  /* Styles for the image within the "showing" section */
+    width: 50%;  /* Sets the width of the image to 50% */
+  }
+  
+  .footer {  /* Styles for the footer section */
+    padding: 24px;  /* Sets padding for the footer */
+    background-color: var(--main-hl-color);  /* Sets background color to the main highlight color */
+    color: var(--main-bg-color);  /* Sets text color to the main background color */
+    text-align: center;  /* Centers text within the footer */
+    font-family: var(--secondary-font);  /* Sets font to the secondary font */
+    font-size: 1.5rem;  /* Sets font size to 1.5rem */
+    font-weight: 400;  /* Sets font weight to normal */
+  }
+  
+  @media (max-width: 1200px) {  /* Media query for screens with a maximum width of 1200 pixels */
+    .header {  /* Styles for the header section on smaller screens */
+      padding: 10%; /* Adjusts padding for the header */
+    }
+  
+    .header__menu {  /* Styles for the menu within the header on smaller screens */
+      justify-content: center;  /* Centers menu items horizontally */
+    }
+  
+    .showing {  /* Styles for the "showing" section on smaller screens */
+      flex-direction: column-reverse;  /* Reverses the order of content and image */
+      padding: 5%;  /* Adjusts padding for the showing section */
+    }
+  
+    .showing__content {  /* Styles for the content section within "showing" on smaller screens */
+      width: 90vw;  /* Sets the width of the content section to 90% of the viewport width */
+    }
+  }
+
+/*
+.apresentacao__conteudo__texto a{
+    text-decoration: none;
+    color: var(--main-hl-color);
+}*/
+/*Código para a página cv.html*/
